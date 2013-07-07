@@ -159,7 +159,7 @@
     
     <!-- Connection -->
     
-    <script type="text/javascript" charset="utf-8">
+   <!-- <script type="text/javascript" charset="utf-8">
 
     // Wait for device API libraries to load
     //
@@ -187,6 +187,27 @@
             window.alert('Connection type: ' + states[networkState]);
         }
 
+    </script> -->
+    
+    <!-- Device -->
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        var element = document.getElementById('deviceProperties');
+        element.innerHTML = 'Device Name: '     + device.name     + '<br />' +
+                            'Device Cordova: '  + device.cordova  + '<br />' +
+                            'Device Platform: ' + device.platform + '<br />' +
+                            'Device UUID: '     + device.uuid     + '<br />' +
+                            'Device Model: '    + device.model    + '<br />' +
+                            'Device Version: '  + device.version  + '<br />';
+    }
+
     </script>
     
   </head>
@@ -205,6 +226,7 @@
 
 		</div>
 	</div> -->
-    <p id="states[networkState]">A dialog box will report the network state.</p>    
+    <!--<p id="">A dialog box will report the network state.</p>    -->
+    <p id="deviceProperties">Loading device properties...</p>
   </body>
 </html>
