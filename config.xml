@@ -17,8 +17,6 @@
     </author>
     <plugin name="Accelerometer" value="CDVAccelerometer" />
     <plugin name="Compass" value="CDVLocation" />
-    <plugin name="NetworkStatus" value="CDVConnection" />
-    <plugin name="Geolocation" value="CDVLocation" />
 
     <!--
         Enable individual API permissions here.
